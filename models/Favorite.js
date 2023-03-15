@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const CartSchema = mongoose.Schema(
+const FavoriteSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -24,19 +24,8 @@ const CartSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-
-    extraData: {
-      quantity: {
-        type: Number,
-        required: true,
-      },
-      categories: {
-        type: Array,
-        required: true,
-      },
-    },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Cart", CartSchema);
+export default mongoose.model("Favorite", FavoriteSchema);

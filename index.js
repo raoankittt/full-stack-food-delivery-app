@@ -4,7 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js";
-import userRoutes from "./routes/cart.js";
+import cartRoutes from "./routes/cart.js";
+import favoriteRoutes from "./routes/favorite.js";
 
 // CONFIGURATION
 const app = express();
@@ -14,7 +15,8 @@ dotenv.config();
 
 // ROUTES
 app.use("/auth", authRoutes);
-app.use("/user", userRoutes);
+app.use("/user", cartRoutes);
+app.use("/user", favoriteRoutes);
 
 // MONGODB CONFIGURATION AND PORT LISTENERS
 
