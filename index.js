@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js";
 import cartRoutes from "./routes/cart.js";
 import favoriteRoutes from "./routes/favorite.js";
+import itemsRoutes from "./routes/Item.js";
 
 // CONFIGURATION
 const app = express();
@@ -17,6 +18,7 @@ dotenv.config();
 app.use("/auth", authRoutes);
 app.use("/user", cartRoutes);
 app.use("/user", favoriteRoutes);
+app.use("/items", itemsRoutes);
 
 // MONGODB CONFIGURATION AND PORT LISTENERS
 
